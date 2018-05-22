@@ -8,11 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var index_1 = require("../shared/index");
-var ProductCreateEditComponent = (function () {
+var ProductCreateEditComponent = /** @class */ (function () {
     function ProductCreateEditComponent(service, activatedRoute, fb, router) {
         this.service = service;
         this.activatedRoute = activatedRoute;
@@ -71,8 +72,11 @@ var ProductCreateEditComponent = (function () {
             selector: "product-create-edit",
             templateUrl: "product-create-edit.component.html",
             styleUrls: ["../../../node_modules/bootstrap/dist/css/bootstrap.css"]
-        }), 
-        __metadata('design:paramtypes', [index_1.ProductService, router_1.ActivatedRoute, forms_1.FormBuilder, router_1.Router])
+        }),
+        __metadata("design:paramtypes", [index_1.ProductService,
+            router_1.ActivatedRoute,
+            forms_1.FormBuilder,
+            router_1.Router])
     ], ProductCreateEditComponent);
     return ProductCreateEditComponent;
 }());

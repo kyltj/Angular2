@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var product_list_component_1 = require("./product-list/product-list.component");
 var product_create_edit_component_1 = require("./product-create-edit/product-create-edit.component");
 var product_delete_component_1 = require("./product-delete/product-delete.component");

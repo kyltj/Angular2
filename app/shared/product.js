@@ -1,9 +1,10 @@
 "use strict";
-var Product = (function () {
-    function Product(id, name, price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
+Object.defineProperty(exports, "__esModule", { value: true });
+var Product = /** @class */ (function () {
+    function Product(Id, Name, Price) {
+        this.Id = Id;
+        this.Name = Name;
+        this.Price = Price;
     }
     return Product;
 }());

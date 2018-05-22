@@ -7,7 +7,7 @@ import { Observable } from "rxjs/Observable";
 @Injectable()
 export class ProductService {
     // адрес сервиса
-    private url = "http://localhost:2403/products";
+    private url = "http://localhost:10336/api/Products";
 
     constructor(private http: Http) { }
 
@@ -16,6 +16,7 @@ export class ProductService {
         let products = this.http.get(this.url)
             .map(this.extractProducts) // преобразовывает ответ в массив экземпляров Product.
             .catch(this.handleError);
+            
         return products;
     }
 
@@ -46,16 +47,18 @@ export class ProductService {
 
     private extractProducts(response: Response) {
         let res = response.json();
+        console.log(res);
         let products: Product[] = [];
         for (let i = 0; i < res.length; i++) {
-            products.push(new Product(res[i].id, res[i].name, res[i].price));
+            products.push(new Product(res[i].Id, res[i].Name, res[i].Price));
         }
         return products;
     }
 
     private extractProduct(response: Response) {
         let res = response.json();
-        let product = new Product(res.id, res.name, res.price);
+       
+        let product = new Product(res.Id, res.Name, res.Price);
         return product;
     }
 
@@ -68,7 +71,7 @@ export class ProductService {
         } else {
             message = error.message ? error.message : error.toString();
         }
-
+        debugger
         console.error(message);
 
         return Observable.throw(message);

@@ -8,10 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var index_1 = require("../shared/index");
-var ProductDeleteComponent = (function () {
+var ProductDeleteComponent = /** @class */ (function () {
     function ProductDeleteComponent(activatedRoute, router, service) {
         this.activatedRoute = activatedRoute;
         this.router = router;
@@ -39,8 +40,10 @@ var ProductDeleteComponent = (function () {
             selector: "product-delete",
             templateUrl: "product-delete.component.html",
             styleUrls: ["../../../node_modules/bootstrap/dist/css/bootstrap.css"]
-        }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, index_1.ProductService])
+        }),
+        __metadata("design:paramtypes", [router_1.ActivatedRoute,
+            router_1.Router,
+            index_1.ProductService])
     ], ProductDeleteComponent);
     return ProductDeleteComponent;
 }());
