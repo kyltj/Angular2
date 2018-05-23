@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
-var index_1 = require("../shared/index");
+var index_1 = require("../models/product/index");
 var ProductCreateEditComponent = /** @class */ (function () {
     function ProductCreateEditComponent(service, activatedRoute, fb, router) {
         this.service = service;

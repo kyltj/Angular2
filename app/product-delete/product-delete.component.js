@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var index_1 = require("../shared/index");
+var index_1 = require("../models/product/index");
 var ProductDeleteComponent = /** @class */ (function () {
     function ProductDeleteComponent(activatedRoute, router, service) {
         this.activatedRoute = activatedRoute;

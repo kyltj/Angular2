@@ -12,16 +12,16 @@ export class ProductService {
     constructor(private http: Http) { }
 
     // Отправка GET запроса нв сервер
-    public getProducts(): Observable<[Product[]]> {
-        let products = this.http.get(this.url)
+    public getProducts(): Observable<Product[]> {
+        let products:Observable<Product[]> = this.http.get(this.url)
             .map(this.extractProducts) // преобразовывает ответ в массив экземпляров Product.
             .catch(this.handleError);
             
         return products;
     }
 
-    public getProduct(id: string): Observable<Product[]> {
-        let product = this.http.get(this.url + "/" + id)
+    public getProduct(id: string): Observable<Product> {
+        let product:Observable<Product> = this.http.get(this.url + "/" + id)
             .map(this.extractProduct) // преобразовывает ответ в экземпляр Product.
             .catch(this.handleError);
         return product;
@@ -29,7 +29,7 @@ export class ProductService {
 
     // Отправка POST запроса на сервер, добавление нового продукта в базу.
     public addProduct(product: Product) {
-        return this.http.post(this.url, product)
+        return this.http.post(this.url,product)
             .catch(this.handleError);
     }
 
@@ -46,14 +46,19 @@ export class ProductService {
     }
 
     private extractProducts(response: Response) {
+        
         let res = response.json();
         console.log(res);
         let products: Product[] = [];
-        for (let i = 0; i < res.length; i++) {
-            products.push(new Product(res[i].Id, res[i].Name, res[i].Price));
-        }
+        
+        res.forEach(function (value) {
+            
+            products.push(new Product(value.Id,value.Name,value.Price));
+            console.log(value);
+          }); 
         return products;
     }
+
 
     private extractProduct(response: Response) {
         let res = response.json();

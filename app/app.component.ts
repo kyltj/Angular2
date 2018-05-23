@@ -7,5 +7,5 @@ import "./rx-js.operators";
     templateUrl: "app.component.html",
     styleUrls: ["app.component.css"]
 }) export class AppComponent {
-
+        
 }

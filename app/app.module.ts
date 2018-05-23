@@ -10,7 +10,7 @@ import { routes } from "./app.routes";
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductCreateEditComponent } from "./product-create-edit/product-create-edit.component";
 import { ProductDeleteComponent } from "./product-delete/product-delete.component";
-import { ProductService } from "./shared/index";
+import { ProductService } from "./models/product/index";
 
 @NgModule({
     imports: [

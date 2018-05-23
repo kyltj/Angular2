@@ -48,24 +48,22 @@ var ProductService = /** @class */ (function () {
             .catch(this.handleError);
     };
     ProductService.prototype.extractProducts = function (response) {
-        debugger
         var res = response.json();
+        console.log(res);
         var products = [];
-        for (var i = 0; i < res.length; i++) {
-            products.push(new product_1.Product(1, 2, 3));
-        }
+        res.forEach(function (value) {
+            products.push(new product_1.Product(value.Id, value.Name, value.Price));
+            console.log(value);
+        });
         return products;
     };
     ProductService.prototype.extractProduct = function (response) {
-        debugger
         var res = response.json();
-        console.log(res);
-        var product = new product_1.Product(res.id, res.name, res.price);
+        var product = new product_1.Product(res.Id, res.Name, res.Price);
         return product;
     };
     ProductService.prototype.handleError = function (error, cought) {
         var message = "";
-        debugger
         if (error instanceof http_1.Response) {
             var errorData = error.json().error || JSON.stringify(error.json());
             message = error.status + " - " + (error.statusText || '') + " " + errorData;
