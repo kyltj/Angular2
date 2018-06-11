@@ -7,10 +7,13 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { routes } from "./app.routes";
 
-import { ProductListComponent } from "./product-list/product-list.component";
-import { ProductCreateEditComponent } from "./product-create-edit/product-create-edit.component";
-import { ProductDeleteComponent } from "./product-delete/product-delete.component";
+import { ProductListComponent } from "./product/product-list/product-list.component";
+import { ProductCreateEditComponent } from "./product/product-create-edit/product-create-edit.component";
+import { ProductDeleteComponent } from "./product/product-delete/product-delete.component";
 import { ProductService } from "./models/product/index";
+import { ProductComponent } from "./product/product.component";
+import { FooterComponent } from "./sharedComponent/footer/footer.component";
+import { HeaderComponent } from "./sharedComponent/header/header.component";
 
 @NgModule({
     imports: [
@@ -23,7 +26,10 @@ import { ProductService } from "./models/product/index";
         AppComponent,
         ProductListComponent,
         ProductCreateEditComponent,
-        ProductDeleteComponent],
+        ProductDeleteComponent,
+         ProductComponent,
+        FooterComponent,
+        HeaderComponent],
     bootstrap: [AppComponent],
     providers: [ProductService]
 })

@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var index_1 = require("../models/product/index");
+var product_1 = require("../../models/product");
 var ProductListComponent = /** @class */ (function () {
     function ProductListComponent(service, router) {
         this.service = service;
@@ -43,7 +43,7 @@ var ProductListComponent = /** @class */ (function () {
             templateUrl: "product-list.component.html",
             styleUrls: ["../../../node_modules/bootstrap/dist/css/bootstrap.css"]
         }),
-        __metadata("design:paramtypes", [index_1.ProductService,
+        __metadata("design:paramtypes", [product_1.ProductService,
             router_1.Router])
     ], ProductListComponent);
     return ProductListComponent;

@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var index_1 = require("../models/product/index");
+var product_1 = require("../../models/product");
 var ProductDeleteComponent = /** @class */ (function () {
     function ProductDeleteComponent(activatedRoute, router, service) {
         this.activatedRoute = activatedRoute;
@@ -43,7 +43,7 @@ var ProductDeleteComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [router_1.ActivatedRoute,
             router_1.Router,
-            index_1.ProductService])
+            product_1.ProductService])
     ], ProductDeleteComponent);
     return ProductDeleteComponent;
 }());

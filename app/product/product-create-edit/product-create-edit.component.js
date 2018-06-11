@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
-var index_1 = require("../models/product/index");
+var product_1 = require("../../models/product");
 var ProductCreateEditComponent = /** @class */ (function () {
     function ProductCreateEditComponent(service, activatedRoute, fb, router) {
         this.service = service;
@@ -55,7 +55,7 @@ var ProductCreateEditComponent = /** @class */ (function () {
                 }, function (error) { return _this.errorMessage = error; });
             }
             else {
-                _this.currentProduct = new index_1.Product(null, null, null);
+                _this.currentProduct = new product_1.Product(null, null, null);
                 _this.productForm.patchValue(_this.currentProduct);
             }
         });
@@ -73,7 +73,7 @@ var ProductCreateEditComponent = /** @class */ (function () {
             templateUrl: "product-create-edit.component.html",
             styleUrls: ["../../../node_modules/bootstrap/dist/css/bootstrap.css"]
         }),
-        __metadata("design:paramtypes", [index_1.ProductService,
+        __metadata("design:paramtypes", [product_1.ProductService,
             router_1.ActivatedRoute,
             forms_1.FormBuilder,
             router_1.Router])
