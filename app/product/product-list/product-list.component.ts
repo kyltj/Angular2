@@ -8,7 +8,7 @@ import { Product, ProductService } from "../../models/product";
     templateUrl: "product-list.component.html",
     styleUrls: ["../../../node_modules/bootstrap/dist/css/bootstrap.css"]
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent  {
     products: Product[];
     errorMessage: string;
 

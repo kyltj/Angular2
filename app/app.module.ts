@@ -24,9 +24,9 @@ import { HeaderComponent } from "./sharedComponent/header/header.component";
     ],
     declarations: [
         AppComponent,
-        ProductListComponent,
-        ProductCreateEditComponent,
-        ProductDeleteComponent,
+        // ProductListComponent,
+        // ProductCreateEditComponent,
+        // ProductDeleteComponent,
          ProductComponent,
         FooterComponent,
         HeaderComponent],

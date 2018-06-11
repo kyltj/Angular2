@@ -13,9 +13,6 @@ var http_1 = require("@angular/http");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var app_routes_1 = require("./app.routes");
-var product_list_component_1 = require("./product/product-list/product-list.component");
-var product_create_edit_component_1 = require("./product/product-create-edit/product-create-edit.component");
-var product_delete_component_1 = require("./product/product-delete/product-delete.component");
 var index_1 = require("./models/product/index");
 var product_component_1 = require("./product/product.component");
 var footer_component_1 = require("./sharedComponent/footer/footer.component");
@@ -33,9 +30,9 @@ var AppModule = /** @class */ (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                product_list_component_1.ProductListComponent,
-                product_create_edit_component_1.ProductCreateEditComponent,
-                product_delete_component_1.ProductDeleteComponent,
+                // ProductListComponent,
+                // ProductCreateEditComponent,
+                // ProductDeleteComponent,
                 product_component_1.ProductComponent,
                 footer_component_1.FooterComponent,
                 header_component_1.HeaderComponent
